@@ -1,0 +1,15 @@
+body {
+  background-image: radial-gradient(rgb(29, 67, 20), rgb(73, 116, 42));
+  text-align: center;
+  color: rgb(238, 222, 39);
+  margin: 0;
+  padding: 150px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
