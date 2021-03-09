@@ -1,24 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Hello from "./Movie";
+import Main from "./Movie";
 import reportWebVitals from "./reportWebVitals";
-
-const postThings = {
-  postTitle: "X!",
-  author: "Y",
-  content: "Z",
-  comments: ["P", "L"],
-};
 
 ReactDOM.render(
   <React.StrictMode>
-    <Hello
-      postTitle={postThings.postTitle}
-      author={postThings.author}
-      content={postThings.content}
-      comments={postThings.comments}
-    />
+    <Main />
   </React.StrictMode>,
   document.getElementById("root")
 );
