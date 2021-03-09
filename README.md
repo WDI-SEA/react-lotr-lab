@@ -1,107 +1,70 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)  Lord of the Rings Exercise
+# Getting Started with Create React App
 
-Let's build something small to reinforce what you've learned so far. We're going
-to practice creating components and passing information into them.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-We'll build a simple website that shows title and runtime information about the
-original Lord of the Rings Trilogy.
+## Available Scripts
 
-Specifically, at the end of this lab, your solution will look like this:
-![Lord of the Rings movie info](https://github.com/WDI-SEA/react_intro_global/blob/master/images/lotr.png)
+In the project directory, you can run:
 
-### Setup
-Create a new react app called `lord-of-the-rings`:
+### `npm start`
 
-### Create A Simple Movie Component
-Inside of `./src` folder, create a new React Component file called `Movie.js`.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Add some JSX to the render function so this component will be visible in
-our application. Let's keep the JSX simple for now, and we'll make it more
-complex once we're sure it works.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-Remember, our goal is to display the movie title and
-runtime information. Let's add one `<h1>` for the movie title, and a `<p>` for the runtime.
+### `npm test`
 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Viewing the Component
+### `npm run build`
 
-Open `src/App.js`.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Add the `<Movie />` component just after the paragraph. Go back to the
-app and see if it appears.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Dealing with Errors
-Uh oh. There's an error.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-```
-Failed to compile
-./src/App.js
-  Line 15:  'Movie' is not defined  react/jsx-no-undef
-```
+### `npm run eject`
 
-`'Movie'` is not defined? Ah.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-One does not simply refer to components in React. In our `src/App.js`, we're saying "Display what's returned from the `Movie` component." However - we haven't told `src/Apps.js` where to find the `Movie` component! 
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Add an import statement at the top of the `src/App.js` file.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Now you should see the page without the error message, and it should have the
-JSX from the Movie component.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## Learn More
 
-### Passing Information via Properties
-We need to make the Movie component accept information so we can use it to
-display different titles and runtimes. In the `src/App.js` file, add `title`, `hours`, and `minutes`
-props to the `<Movie>` tag. 
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-We'll be able to read the value of these props from inside the component. You can name props pretty much
-anything you want - but it's good practice to be descriptive!
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Update the JSX in `src/Movie.js` to access and display the value of each prop we created.
+### Code Splitting
 
-Refresh the page and make sure everything works correctly.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Reusing the Component
-Once you've got props working for one component, then write two more!
+### Analyzing the Bundle Size
 
-In `src/App.js`, call the `<Movie />` component again with different values for the `title`, `hours` and `minutes`
-properties. Display information for the complete trilogy! (If you don't know everything about Lord of the Rings off the top of your head, here it is).
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-title | hours | minutes
-------|-------|--------
-The Fellowship of the Ring | 2 | 58
-The Two Towers | 2 | 59
-The Return of the King | 3 | 21
+### Making a Progressive Web App
 
-# Solution
-When you're finished, review the reflections below.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Reflecting on Reusability
-Components are great because they allow us to compartmentalize code and easily reuse parts we create. We simply set the value of props and the component defines how everything should be displayed.
+### Advanced Configuration
 
-In this instance, we factored out some redundancy of the
-movie titles.
-- All these movies start with `"Lord of the Rings:"`, so only the unique part is the prop.
-- Similarly, we don't have to rewrite the format of the runtime information.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-Building and reusing components becomes especially powerful the more complex components become.
-- Imagine building a component for video search results inside YouTube.
-  - The props list is huge:
-    - ton of links
-    - time information
-    - preview images
-    - options to add the result to a playlist
-    - and all sorts of other things.
+### Deployment
 
-Building one component to rule all them all would save you a lot of time and headaches!
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
+### `npm run build` fails to minify
 
-### Internet Dive Point
-In case you want to nerd out, here are handy links to the IMDB page for each
-movie:
-
-* [Lord of the Rings: The Fellowship of the Ring](http://www.imdb.com/title/tt0120737/)
-* [Lord of the Rings: The Two Towers](http://www.imdb.com/title/tt0167261/)
-* [Lord of the Rings: The Return of the King](http://www.imdb.com/title/tt0167260/)
-
-_edited from [global code-along](https://github.com/WDI-SEA/react_intro_global/blob/master/11-lotr-codealong.md)_
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
